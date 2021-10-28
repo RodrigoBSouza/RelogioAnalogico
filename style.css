@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #23282B;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    color: #FFF;
+    z-index: 999;
+}
+
+#digital-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 570px;
+    font-size: 45px;
+    width: 170px;
+    height: 50px;
+    border: 2px solid #C3B18F;
+    background-color: #B18E5A;
+}
+
+.border-area {
+    width: 500px;
+    height: 500px;
+    background-color: #B18E5A;;
+    border: 4px solid #C3B18F;
+    border-radius: 50%; 
+    position: absolute;
+}
+
+.border-mid1 {
+    width: 250px;
+    height: 250px;
+    border: 3px solid #C3B18F;
+    border-radius: 50%; 
+    position: absolute;
+}
+
+.border-mid2 {
+    width: 258px;
+    height: 258px;
+    border: 3px solid #C3B18F;
+    border-radius: 50%; 
+    position: absolute;
+}
+
+.clock-area {
+    width: 450px;
+    height: 450px;
+    border: 3px solid #000;
+    border-radius: 50%; 
+    position: relative;
+}
+
+.clock-area .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 45px;
+    transform: rotate(var(--rotation));
+}
+
+.clock-area .n1 {
+    --rotation: 30deg;
+}
+.clock-area .n2 {
+    --rotation: 60deg;
+}
+.clock-area .n3 {
+    --rotation: 90deg;
+}
+.clock-area .n4 {
+    --rotation: 120deg;
+}
+.clock-area .n5 {
+    --rotation: 150deg;
+}
+.clock-area .n6 {
+    --rotation: 180deg;
+}
+.clock-area .n7 {
+    --rotation: 210deg;
+}
+.clock-area .n8 {
+    --rotation: 240deg;
+}
+.clock-area .n9 {
+    --rotation: 270deg;
+}
+.clock-area .n10 {
+    --rotation: 300deg;
+}
+.clock-area .n11 {
+    --rotation: 330deg;
+}
+
+.clock-area .time {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock-area::after {
+    content: '';
+    position: absolute;
+    z-index: 11;
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock-area .pointer-second {
+    width: 2px;
+    height: 35%;
+    background-color: #FF0000;
+}
+
+.clock-area .pointer-minute {
+    width: 5px;
+    height: 35%;
+    background-color: #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.clock-area .pointer-hour {
+    width: 5px;
+    height: 27%;
+    background-color: #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
